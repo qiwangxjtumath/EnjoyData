@@ -71,19 +71,3 @@ def WriteDataToXmlFile_1(filename, root, indent="\t", newl="\n", encoding="utf-8
     dom = minidom.parseString(rawText)
     with open(filename, 'w') as f:
         dom.writexml(f, "", indent, newl, encoding)
-
-
-
-'''
-def WriteDataToXmlFile(data, filename):
-    f = open(filename, 'w', encoding='utf-8')
-    if isinstance(data, dict):
-       json.dump(data, f)
-       print("write json file successfully")
-       f.close()
-       return 0
-    else:
-       print("write json file failed")
-       f.close()
-       return -1
-'''
